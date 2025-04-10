@@ -1,0 +1,129 @@
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cart-item:hover {
+    box-shadow: 0 0 20px rgba(100, 149, 237, 0.2);
+  }
+  
+  .cart-item-image {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart-item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item-title {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    color: #f0f0f0;
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+    color: #90cdf4;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #7f8fa6;
+    background: rgba(255, 255, 255, 0.07);
+    color: #e0e0e0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: rgba(100, 149, 237, 0.2);
+    box-shadow: 0 0 10px rgba(100, 149, 237, 0.3);
+  }
+  
+  .quantity {
+    font-size: 1rem;
+    min-width: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .remove-btn {
+    border: none;
+    background-color: transparent;
+    color: #ff6b6b;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    color: #ff3b3b;
+  }
+  
+  .cart-item-subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 600px) {
+    .cart-item {
+      grid-template-columns: 80px 1fr;
+    }
+  
+    .cart-item-subtotal {
+      grid-column: 1 / span 2;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+  
+    .cart-item-actions {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+  
